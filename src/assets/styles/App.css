@@ -247,7 +247,7 @@ body {
   .enlighten button {
     width: 35%;
     padding: 9px 2px;
-    font-size: 15px;
+    font-size: 13px;
   }  
 
   .search-result {
@@ -271,8 +271,16 @@ body {
   }
 
   .fixed-bottom {
-    font-size: 15px;
+    font-size: 13px;
     gap: 8px
+  }
+
+  .input-container input {
+    font-size: 12px;
+  }
+
+  .app {
+    padding: 14px;
   }
 }
 
