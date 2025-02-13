@@ -44,6 +44,12 @@ The idea for KanhaGPT stems from a deep appreciation for the Bhagavad Gita's tea
 
 ## Media
 
+<img width="1079" alt="image" src="https://github.com/user-attachments/assets/c356a9e7-aa4c-453a-a8eb-1f1966da0916" />
+
+<img width="1004" alt="image" src="https://github.com/user-attachments/assets/3a572b38-5653-4576-b135-77d0b6aa39df" />
+
+
+
 
 
 
