@@ -1,0 +1,278 @@
+* {
+  font-family: "Georgia", serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #10469c;
+  color: #0FFCBE;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 120px); /* Adjusting height to fit the screen */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.124);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+.input-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+}
+
+.input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.218);
+}
+
+.input-container button {
+  background: #0FFCBE;
+  color: #10469c;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.input-container button:hover {
+  background: #3caf92;
+  color: white;
+}
+ 
+ .loading {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 4px;  
+   flex-direction: row;   
+   padding: 0px;
+   margin: 0px;
+ }
+
+ .loading img {
+   height: 50px;   
+   margin: 0;   
+   display: inline-block;   
+ }
+
+ .title h1 {
+   font-size: 40px;
+   color: #0FFCBE;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+ .app {
+  width: 100vw;
+  max-width: 1200px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  height: 100vh;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 150px); /* Adjust height dynamically */
+  padding-bottom: 70px;
+}
+
+.search-result div {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.106);
+}
+
+.search-result aside div {
+  background: #0FFCBE;
+  color: #10469c;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.search-result aside div img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.search-result pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: rgba(255, 255, 255, 0.097);
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.enlighten {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.enlighten button {
+  background: #0FFCBE;
+  color: #10469c;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.enlighten button:hover {
+  background: #3caf92;
+  color: white;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px; 
+  background: rgba(0, 0, 0, 0.8); 
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /*shadow to separate from chat*/
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .app {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .container {
+    height: calc(100% - 100px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 10px;  
+    height: 100%;
+  }
+
+  .search-result div {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .search-result aside div {
+    width: 40px;
+    height: 40px;    
+  }
+
+  .search-result aside div img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 8px;  
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-container button {
+    width: 100%;
+    padding: 8px
+  }
+
+  .enlighten {
+    gap: 9px;
+  }
+
+  .enlighten button {
+    width: 35%;
+    padding: 9px 2px;
+    font-size: 15px;
+  }  
+
+  .search-result {
+    padding-bottom: 80px;
+  }
+
+  .search-result div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search-result aside div {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-result aside div img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .fixed-bottom {
+    font-size: 15px;
+    gap: 8px
+  }
+}
+
